@@ -1,16 +1,58 @@
-# React + Vite
+# Frontend + Backend Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Tech Stack:** React, JavaScript, TailwindCSS, Node.js (Express)
 
-Currently, two official plugins are available:
+## Objective
+Build a simplified ChatGPT-style application. The application should have a responsive frontend and a Node.js backend that serves mock data through APIs (no database required).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requirements
 
-## React Compiler
+### Frontend (React, JavaScript, TailwindCSS)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+#### Landing Page
+- A “New Chat” screen where the user can start a new chat.
 
-## Expanding the ESLint configuration
+#### Left Side Panel
+- Displays:
+  - All sessions
+  - "New Chat" option
+  - User info
+- Panel should be collapsible.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#### Chat Interface
+- After the user asks a new question:
+  - Fetch dummy data (from backend API).
+  - Display answer in Table View (Structured Tabular Data) along with some descriptions.
+
+#### Answer Feedback
+- Each answer should have:
+  - Like 👍
+  - Dislike 👎
+
+#### Dark/Light Theme
+- Toggle option on the top bar.
+- Entire application (background, font, colors, etc.) should switch themes.
+
+### Backend (Node.js, Express)
+- **Mock Data:** Create dummy JSON data to serve via APIs.
+- **APIs:**
+  - Start new chat → Returns new session ID.
+  - Ask question in a session → Returns dummy table + information.
+  - Fetch sessions → Returns list of sessions with IDs/titles.
+  - Fetch session history → Returns full chat history for a session.
+
+⚠️ No database required — serve data directly from mock JSON files.
+
+### General Requirements
+- Application must be responsive across mobile, and desktop.
+- Code should be clean, modular, and well-structured.
+- Follow best practices for:
+  - React + JavaScript
+  - TailwindCSS for styling
+  - Node.js Express APIs
+
+### Deliverables
+- Frontend code (React + JavaScript + TailwindCSS).
+- Backend code (Node.js Express with mock JSON APIs).
+- Instructions to run both frontend and backend locally.
+- Deploy code on GitHub and share the link to the public repository.
