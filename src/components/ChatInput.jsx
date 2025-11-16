@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function ChatInput({ onSend }) {
+const ChatInput=({ onSend })=> {
   const [text, setText] = useState("");
 
   const submit = (e) => {
@@ -20,11 +20,8 @@ export default function ChatInput({ onSend }) {
           flex-1 
           p-3 sm:p-4
           rounded-2xl
-          bg-gray-800 dark:bg-gray-700
-          text-gray-100 placeholder-gray-400
+          bg-gray-900 dark:bg-gray-100 text-gray-100 dark:text-gray-900 placeholder-gray-400
           border border-gray-700 dark:border-gray-600
-          focus:outline-none focus:ring-2 focus:ring-blue-500
-          transition
         "
         placeholder="Type your message..."
       />
@@ -45,3 +42,5 @@ export default function ChatInput({ onSend }) {
     </form>
   );
 }
+
+export default ChatInput
